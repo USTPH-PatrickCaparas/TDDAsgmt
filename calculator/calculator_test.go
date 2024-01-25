@@ -99,7 +99,7 @@ func TestSearchPersonSameCity(t *testing.T) {
 	for _, test := range tc {
 		t.Run(test.name, func(t *testing.T) {
 			want := test.expectedOutput
-			got, err := countPersonSameCity(test.person, test.city)
+			got, err := searchPersonSameCity(test.person, test.city)
 
 			assert.Equal(test.expectedError, err)
 			assert.Equal(want, got)
